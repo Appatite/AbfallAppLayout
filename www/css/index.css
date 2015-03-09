@@ -121,6 +121,37 @@ body {
 	color: black;
 }
 
+.maintopic {
+	background-color: lightgrey;
+	color: white;
+	//opacity: 0.2;
+}
+
+#eins {
+	background-color: #3399FF;
+
+}
+
+#eins a{
+
+	color: #FFFFFF;
+}
+
+#zwei {
+	background-color: #70B8FF;
+	color: white;
+}
+
+#drei{
+	background-color: #99CCFF;
+	color: white;
+}
+
+#vier {
+	background-color: #EBF5FF;
+	color: white;
+}
+
 .displaynone{
 	display: none;
 }
