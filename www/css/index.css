@@ -21,6 +21,8 @@
 }
 
 body {
+	
+	
 	-webkit-touch-callout: none; /* prevent callout to copy image, etc when tap lightto hold */
 	-webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
 	-webkit-user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
@@ -57,18 +59,53 @@ p, img {
 }
 
 #indexlink a {
-	text-decoration: none;
+	//text-decoration: none;
 	color: white;//
 	border: 1px solid green;
 }
 
 #header {
 	width: 100%;
+	//left: 5%;
+	//border-bottom: 1px solid grey;
 	height: 80px;
-	background: #76e2f8;
+	//background: #76e2f8;
+	//background: white;
 
 	position: fixed;
 	z-index: 2;
+}
+
+#headerMenu {
+	width: 100%;
+	//left: 5%;
+	//border-bottom: 1px solid grey;
+	height: 80px;
+	//background: #76e2f8;
+	background: white;
+
+	position: fixed;
+	z-index: 2;
+}
+
+#headerKundigung {
+	width: 100%;
+	//left: 5%;
+	//border-bottom: 1px solid grey;
+	height: 80px;
+	//background: #76e2f8;
+	background: orange;
+
+	position: fixed;
+	z-index: 2;
+}
+
+.white {
+	background: white;
+}
+
+.orange {
+	background: orange;
 }
 
 #disclaimer {
@@ -78,7 +115,7 @@ p, img {
 	background: white;
 	top: 10%;
 	left: 10%;//
-	order: 2px solid red;
+	border: 2px solid red;
 	padding: 10px;
 	z-index: 3;
 	color: black;
@@ -97,8 +134,9 @@ p, img {
 	width: 80%;
 	height: 15%;
 	position: relative;
+	//margin: 90% auto 0 auto;
 	padding: 10px;
-	top: 75%;
+	top: 70%;
 	left: 10%;
 	border: 1px solid black;
 	text-align: center;
@@ -107,7 +145,7 @@ p, img {
 	box-sizing: border-box; /* Safari 5.1+, Chrome 10+, Firefox 29+, Opera 7+, IE 8+, Android 4.0+, iOS any */
 }
 
-#linksleer, #menumitte, #exitrechts {
+#linksleer, #menumitte, #exitrechts, #linksleerk, #menumittek, #exitrechtsk {
 	display: table;
 	width: 33%;
 	height: 80px;
@@ -117,6 +155,7 @@ p, img {
 	-webkit-box-sizing: border-box; /* Safari 3.0 - 5.0, Chrome 1 - 9, Android 2.1 - 3.x */
 	-moz-box-sizing: border-box; /* Firefox 1 - 28 */
 	box-sizing: border-box; /* Safari 5.1+, Chrome 10+, Firefox 29+, Opera 7+, IE 8+, Android 4.0+, iOS any */
+	
 }
 /*#homeButton{
  display: table-cell;
@@ -125,16 +164,19 @@ p, img {
  line-height: 80px;
  //color: green;
  }*/
-
-#linksleer a {
+#linksleer, #linksleerk{
+	visibility:hidden;
+}
+#linksleer a, #linksleerk a {
 	display: table-cell;//
 	text-align: center;
 	vertical-align: middle;
 	line-height: 80px;
-	color: white;
+	color: grey;
 	text-decoration: none;
+	
 }
-#linksleer img {
+#linksleer img, #linksleerk img {
 	height: 40px;//
 	float: right;
 	padding-left: 10px;
@@ -142,14 +184,18 @@ p, img {
 	border: 1px solid red;
 }
 
-#exitrechts img {
+#exitrechts img, #exitrechtsk img {
 	height: 40px;
 	float: right;
 	padding-right: 10px;
 	padding-top: 20px;
 }
 
-#menumitte img {
+#menumitte, #menumittek{
+	visibility:hidden;
+}
+
+#menumitte img, #menumittek img {
 	height: 30px;
 	display: block;
 	margin: 0 auto;
@@ -174,7 +220,7 @@ p, img {
 	position: absolute;
 	background: white;//
 	background-image: url("../img/FontArbeitsrecht.png");//
-	background: orange;
+	//background: orange;
 	background-size: 100%;//
 	border: 1px solid red;
 	
@@ -182,22 +228,60 @@ p, img {
 
 #inner {
 	width: 80%;
-	height: 60%;
-	top: 40%;
+	height: 100%;
+	//top: 20%;
+
 	margin: 0 auto;
 	position: relative;
-	text-align: left;//
-	background: orange;//
+	text-align: left;
+	//background: orange;//
 	border: 1px solid green;
 	color: black;
 	
+
+	
 }
 
-#inner > h1 {
+#circle
+{
+	width: 0px;
+	height: 0px;
+	margin: 0 auto;
+	position: relative;
+	top:0;
+	background: #76e2f8;
+	//background: white;
+	border-radius: 50%;
+	//display: table;
+	text-align:center;
+	//border: 1px solid red;
+	//visibility:hidden;
+	
+	
+}
+
+
+
+
+
+#circle > h1 {
 	font-size: 28px;
 	font-weight: 100;
 	margin: 0;
+	display:table-cell;
+	vertical-align: middle;
+	color: white;
+	border: 1px solid green;
 	
+}
+
+#headline {
+	width: 80%;
+	margin-top: 33%;
+	margin-left:10%;
+	display:table-cell;
+	vertical-align: middle;
+	//border: 1px solid red;
 }
 
 #kuendigung {
@@ -215,17 +299,22 @@ p, img {
 }
 
 #kuendigung> h1 {
-	font-size: 15px;
+	font-size: 22px;
 	font-weight: 100;
 	margin: 0;
-	//text-align: center;
-	font-family: 'open_sanssemibold';
-	font-weight:bold;
+	padding-top:10px;
+	padding-bottom:10px;
+	text-align: center;
+	font-family: 'open_sanslight';
+	//font-weight:bold;
 }
 
 #kuendigung ul {
-	//padding:0;
-	//margin: 0;
+	width:70%;
+	padding-bottom:15px;
+	padding-left: 5px;
+	margin: 0 auto;
+	//border: 1px solid red;
 	
 	
 }
@@ -274,11 +363,11 @@ p, img {
 	font-size: 16px;//
 	text-transform: none;
 }
-
+#76e2f8;
 #nav {//
 	margin-top: 80px;
-	width: 100%;//
-	border: 1px solid red;
+	width: 100%;
+	//border: 1px solid red;
 }
 
 #nav ul {
@@ -310,6 +399,24 @@ p, img {
 	border-bottom: 0px;
 }
 
+/*#einsDiv {
+	height: 60px;
+	width: 60px;
+	float: left;//#76e2f8;
+	display: inline;
+	position: relative;
+	top: -20px;
+	left: -20px;//
+	border-radius: 50%;
+	border-bottom: 1px solid grey;
+	background-color: orange;
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box; 
+	//border-radius: 50%;
+}*/
+
 #einsDiv {
 	height: 60px;
 	width: 60px;
@@ -318,12 +425,16 @@ p, img {
 	position: relative;
 	top: -20px;
 	left: -20px;//
+	border-radius: 50%;
 	border-bottom: 1px solid grey;
 	background-color: orange;
-	-webkit-box-sizing: border-box; /* Safari 3.0 - 5.0, Chrome 1 - 9, Android 2.1 - 3.x */
-	-moz-box-sizing: border-box; /* Firefox 1 - 28 */
-	box-sizing: border-box; /* Safari 5.1+, Chrome 10+, Firefox 29+, Opera 7+, IE 8+, Android 4.0+, iOS any */
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box; 
+	//border-radius: 50%;
 }
+
 
 #zweiDiv {
 	height: 60px;
@@ -430,6 +541,11 @@ p, img {
 	display: block;
 }
 
+.displaytable {
+	display: table;
+}
+
+
 #balkenRechts {
 	width: 8%;
 	height: 10%;
@@ -487,6 +603,45 @@ p, img {
 		margin: -90px 0px 0px -198px; /* offset vertical: half of image height */
 		/* offset horizontal: half of image width and text area width */
 	}
+	
+	#inner {
+	width: 95%;
+
+}
+
+disclaimerButton {
+
+	
+	top:50%;
+
+
+
+}
+	#circle
+{
+	width: 50%;
+	height: 10px;
+	margin: 0 auto;
+	position: relative;
+	top:10%;
+	//background: #76e2f8;
+	background: #76e2f8;
+	border-radius: 50%;
+	//display: table;
+	text-align:center;
+	//border: 1px solid red;
+	
+}
+
+#kuendigung ul {
+	width:40%;
+	padding-bottom:15px;
+	padding-left: 5px;
+	margin: 0 auto;
+	//border: 1px solid red;
+	
+	
+}
 
 }
 

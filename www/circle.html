@@ -27,33 +27,18 @@ under the License.
 		<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
 		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
 		<link rel="stylesheet" href="css/opensans_light_macroman/stylesheet.css" type="text/css" charset="utf-8" />
-		<link rel="stylesheet" href="css/opensans_semibold_macroman" type="text/css" charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
 		<title>Die Arbeitsrecht App</title>
 	</head>
-	<body onload="colorFunction()">
-		<div id="balkenRechts"><img src="img/images/arrowrightBlack.png" /></div>
-		<div id="balkenLinks"><img src="img/images/arrowleftBlack.png" /></div>
-	<div id="headerKundigung" class="displayblock">
-		<div id="linksleerk">
-			<img src="img/Icons08042015/arrowLeftWhite.png" >
-			<a href="index.html"><span id="homeButton" style="color:white;">Home</span></a>
-		</div>
-		<div id="menumittek">
-			<img src="img/Icons08042015/menuWeiss.png" onclick="menuFunction('kuendigung')">
-		</div>
-		<div id="exitrechtsk">
-			<img src="img/Icons08042015/XWhite.png" onclick="endApp()">
-		</div>
-		<div class="clear"></div>
-	</div>
-	<div id="headerMenu" class="displaynone">
+	<body>
+
+	<div id="header" >
 		<div id="linksleer">
 			<img src="img/Icons08042015/arrowLeftGrey.png" >
-			<a href="index.html"><span id="homeButton" style="color:grey;">Home</span></a>
+			<a href="index.html"><span id="homeButton">Home</span></a>
 		</div>
 		<div id="menumitte">
-			<img src="img/Icons08042015/MenuGrau.png" onclick="menuFunction('kuendigung')">
+			<img src="img/Icons08042015/MenuGrau.png" onclick="disclaimerFunction()">
 		</div>
 		<div id="exitrechts">
 			<img src="img/Icons08042015/XGrey.png" onclick="endApp()">
@@ -87,36 +72,25 @@ under the License.
 		</div>
 		</div>-->
 
-		<div id="kuendigung">
+		<div id="inner"  >
+			<!--<div id="circle" class="displaynone" onclick="disclaimerFunction()">
+					<img id="headline" src="img/Icons08042015/Headline.png">
+
+			</div>-->
+			
+			<svg style="width:100%;height:100%">
+
+  <circle cx="50%" cy="50%" r="25%"  fill="cyan" />
+</svg>
 			
 
-			<h1 >Worauf muss ich beim Abschluß eines Arbeitsvertrages achten?</h1>
-			<!--<button onclick="colorFunction()">Klick</button>
-			<a href="index.html"><button>Home</button></a>-->
-			
-			<ul>
-				<li>Achten Sie hierauf</li>
-				<li>Und auch darauf</li>
-				<li>Besonders wichtig</li>
-				<li>Das sollten Sie beachten</li>
+			<!--<p>
+				Arbeitsrecht für Arbeitnehmer
+			</p>-->
 
-			</ul>
-			
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-			</p>
-			<br/>
-			<p>
-				Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
-							</p>
-			<br/>
-			<p>
-				Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. 
-			</p>
-			<br/>
-			<br/>
-
-
-
+			<div id="copyright">
+				<h2 id="indexlink"><a href="http://www.kanzleivorort.de">&copy; 2015 www.kanzleivorort.de</a></h2>
+			</div>
 		</div>
 		<div id="nav" class="displaynone">
 			<ul>
@@ -145,7 +119,7 @@ under the License.
 				</li>
 				<li>
 					<a href="kundigung.html">Worauf muss ich achten</a>
-				</li>
+				</li>    	    	
 				<li>
 					<a href="#">Was mache ich, wenn ich ... bekomme</a>
 				</li>
@@ -195,7 +169,7 @@ under the License.
 					<a href="#">Wieviel Urlaub steht mir zu</a>
 				</li>
 				<li class="lastSibling">
-					<a href="#">Das ??? hilft weiter</a>
+					<a href="#">Das ??? hilft weiter</a>    	    	
 				</li>
 				<li id="linkdrei" class="maintopic">
 					<a href="#">Alles hat ein Ende</a>
@@ -264,8 +238,7 @@ under the License.
 	</div>
 	<script type="text/javascript" src="cordova.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
-	<!--<script type="text/javascript" src="js/app2.js"></script>-->
-	<script type="text/javascript" src="js/kundigung.js"></script>
+	<script type="text/javascript" src="js/app2.js"></script>
 	<script type="text/javascript">
 		app.initialize();
 	</script>
