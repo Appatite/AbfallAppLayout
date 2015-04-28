@@ -27,12 +27,12 @@ under the License.
 		<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
 		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
 		<link rel="stylesheet" href="css/opensans_light_macroman/stylesheet.css" type="text/css" charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="css/index.css" />
-		<title>Die Arbeitsrecht App</title>
+		<link rel="stylesheet" type="text/css" href="css/indexNeu.css" />
+		<title>Die Abfall-App Layout</title>
 	</head>
 	<body>
 
-	<div id="header" >
+	<!--<div id="header" >
 		<div id="linksleer">
 			<img src="img/Icons08042015/arrowLeftGrey.png" >
 			<a href="index.html"><span id="homeButton">Home</span></a>
@@ -44,196 +44,159 @@ under the License.
 			<img src="img/Icons08042015/XGrey.png" onclick="endApp()">
 		</div>
 		<div class="clear"></div>
-	</div>
-	<div id="disclaimer" class="displaynone">
+	</div>-->
+	<!--<div id="disclaimer" class="displaynone">
 		Disclaimer
 		<div id="disclaimerButton" onclick="disclaimerHideFunction()">
 			Ja, habe ich zur Kenntniss genommen
 		</div>
-	</div>
+	</div>-->
+	<div id="wrapperBild"></div>
 	<div id="wrapperStart">
-		<!--	<div id="header" >
-		<div id="linksleer">
-		<img src="img/images/arrowleft.png" >
-		<a href="index.html"><span id="homeButton">Home</span></a>
-		</div>
-		<div id="menumitte">
-		<img src="img/images/menicon_weiss.png" onclick="disclaimerFunction()">
-		</div>
-		<div id="exitrechts">
-		<img src="img/images/cross.png" onclick="endApp()">
-		</div>
-		<div class="clear"></div>
-		</div>
-		<div id="disclaimer" class="displaynone">
-		Disclaimer
-		<div id="disclaimerButton" onclick="disclaimerHideFunction()">
-		Ja, habe ich zur Kenntniss genommen
-		</div>
-		</div>-->
 
-		<div id="inner"  >
-			<div id="circle" class="displaynone" onclick="disclaimerFunction()">
-					<img id="headline" src="img/Icons08042015/HeadlineNeu.png">
 
-			</div>
+			<div id="inner"  >
+				<div id="infoHead">
+					<button id="einstellungen" onclick="einstellFunction()">Einstellung</button>
+					<div id="cross">
+						<img src="img/XWhite.png" onclick="endApp()">
+					</div>
+					<div class="clear"></div>
+					
+				</div>
+				
+				<div id="infoHeadStrasse" class="displaynone">
+					<button id="einstellungen" onclick="zurueckFunction()">Zurück</button>
+					<div id="cross">
+						<img src="img/XWhite.png" onclick="endApp()">
+					</div>
+					<div class="clear"></div>
+					
+				</div>
+				
+				<div id="anzeigeView">
+		  
+				  <div id="anzeigeLeerung">
+				  </div>
+				  <!--<div id="layoutTest">
+				  	<p class="muellBezeichner">Roter Deckel</p>
+				  	<p id="muellRoterDeckel">23:04:2015</p>
+				  	<p class="muellBezeichner">Roter Deckel</p>
+				  	<p id="muellRoterDeckel">23:04:2015</p>
+				  					  	<p class="muellBezeichner">Roter Deckel</p>
+				  	<p id="muellWertstoff">23:04:2015</p>
+				  					  	<p class="muellBezeichner">Roter Deckel</p>
+				  	<p id="muellBio">23:04:2015</p>
+				  					  	<p class="muellBezeichner">Roter Deckel</p>
+				  	<p id="muellPapier">23:04:2015</p>
+				  	
+				  	
+				  </div>-->
+				  
+			  </div>
+<!--=====================================================================================================================================-->			  
+			  <div id="strassenauswahlDiv" class="displaynone">
+			  	
+
+
+						<p>Die ersten 2 Buchstaben Ihrer Strasse eingeben:</p>
+						
+						<input id="strassenanfang" type="text" value=""/>
+				  		<button onclick="getInput()">Strasse suchen</button>
+		
+					  <ul id="ListeUl">
+					  	<!--<li>Bitte wählen Sie eine Strasse aus:</li>-->
+					  </ul>
+					  <button onclick="geheZuMuelauswahl()">Weiter</button>
+			  </div>
+	
+<!--=====================================================================================================================================-->
+
+			<div id="checkBoxDiv" class="displaynone">
+
+			  <p>Bitte auswählen:</p>
+			  <br/>
+			  <p>Hausmülltonnen:</p>
+			  	
 			
+			  <form id="checkbox">
+			  	
+					<section class="checkboxSection">
+			
+					  	<div class="checkboxFive">
+					  		<input type="checkbox"  id="checkboxFiveInput1" name="RoterDeckel" value="RoterDeckel">
+						  	<label for="checkboxFiveInput1"></label>
+					  	</div>
+					  	<div class="checkboxFiveText">Roter Deckel</div>
+					</section>
+					
+					<section class="checkboxSection">
+			
+					  	<div class="checkboxFive">
+					  		<input type="checkbox" id="checkboxFiveInput2" name="GrünerDeckel" value="GrünerDeckel">
+						  	<label for="checkboxFiveInput2"></label>
+					  	</div>
+					  	<div class="checkboxFiveText">Grüner Deckel</div>
+					</section>
+					
+					<section class="checkboxSection">
+					  	<div class="checkboxFive">
+					  		<input type="checkbox" id="checkboxFiveInput3" name="BlauerDeckel" value="BlauerDeckel">
+						  	<label for="checkboxFiveInput3"></label>
+					  	</div>
+					  	<div class="checkboxFiveText">Blauer Deckel</div>
+					</section>
+					
+					<p>Wertstofftonnen:</p>
+					<section class="checkboxSection">
+			
+					  	<div class="checkboxFive">
+					  		<input type="checkbox" id="checkboxFiveInput4" name="WertBezirk" value="WertBezirk">
+						  	<label for="checkboxFiveInput4"></label>
+					  	</div>
+					  	<div class="checkboxFiveText">Gelber Deckel</div>
+					</section>
+					
+					<section class="checkboxSection">
+					  
+					  	<div class="checkboxFive">
+					  		<input type="checkbox" id="checkboxFiveInput5" name="BioBezirk" value="BioBezirk">
+						  	<label for="checkboxFiveInput5"></label>
+					  	</div>
+					  	<div class="checkboxFiveText">Biotonne</div>
+					</section>
+					
+					<section class="checkboxSection">
+					  
+					  	<div class="checkboxFive">
+					  		<input type="checkbox" id="checkboxFiveInput6" name="PapierBezirk" value="PapierBezirk">
+						  	<label for="checkboxFiveInput6"></label>
+					  	</div>
+					  	<div class="checkboxFiveText">Papiertonne</div>
+					</section>
+					
+					
+			  
+			   <!--<input type="checkbox" name="GrünerDeckel" value="GrünerDeckel"> Hausmüll grüner Deckel<br>
+			    <input type="checkbox" name="BlauerDeckel" value="BlauerDeckel"> Hausmüll blauer Deckel<br>
+			    <br/>
+			     <input type="checkbox" name="WertBezirk" value="WertBezirk"> Wertstoff gelber Deckel<br>
+			      <input type="checkbox" name="BioBezirk" value="BioBezirk"> Biotonne<br>
+			       <input type="checkbox" name="PapierBezirk" value="PapierBezirk"> Papiertonne<br>--></br>
+			  
+			
+			</form>
+			<button onclick="setTonnenAuswahl()">Speichern</button>
+			<!--<button onclick="reloadFunction()">Speichern</button>-->
+			 </div>
 
-			<!--<p>
-				Arbeitsrecht für Arbeitnehmer
-			</p>-->
-
-			<div id="copyright">
-				<h2 id="indexlink">&copy; 2015 <a href="http://www.kanzleivorort.de">www.kanzleivorort.de</a></h2>
-			</div>
-		</div>
-		<div id="nav" class="displaynone">
-			<ul>
-				<li id="eins" onclick="linkeinsOben()">
-					<div id="einsDiv"></div>
-					<a href="#linkeins">Abschluß Arbeitsvertrag</a>
-				</li>
-
-				<li id="zwei">
-					<div id="zweiDiv"></div>
-					<a href="#linkzwei">Während des Arbeits??</a>
-				</li>
-				<li id="drei">
-					<div id="dreiDiv"></div>
-					<a href="#linkdrei">Alles hat ein Ende</a>
-				</li>
-				<li id="vier">
-					<div id="vierDiv"></div>
-					<a href="#linkvier">Wie komme ich zu meinem Recht</a>
-				</li>
-				<li class="lastSibling">
-					<a href="#"></a>
-				</li>
-				<li id="linkeins" class="maintopic" onclick="linkeinsOben()">
-					<a href="#">Abschluß Arbeitsvertrag</a>
-				</li>
-				<li>
-					<a href="kundigung.html">Worauf muss ich achten</a>
-				</li>    	    	
-				<li>
-					<a href="#">Was mache ich, wenn ich ... bekomme</a>
-				</li>
-				<li>
-					<a href="#">Muß ich ein Gesundheitszeugniss vorlegen?</a>
-				</li>
-				<li>
-					<a href="#">Muß ich ein polizeiliches Führungszeugniss vorlegen?</a>
-				</li>
-				<li>
-					<a href="#">Mutterschaftsrecht</a>
-				</li>
-				<li class="lastSibling">
-					<a href="#">Muß ich Schwangerschaft mitteilen?</a>
-				</li>
-				<li id="linkzwei" class="maintopic">
-					<a href="#">Während des Arbeits??</a>
-				</li>
-				<li>
-					<a href="#">Wieviel Lohn steht mir zu?</a>
-				</li>
-				<li>
-					<a href="#">Überstunden Gratisleistung?</a>
-				</li>
-				<li>
-					<a href="#">Was tun, wenn der Arbeitgeber nicht zahlt?</a>
-				</li>
-				<li>
-					<a href="#">Achtung Ausschlußfrist</a>
-				</li>
-				<li>
-					<a href="#">???: Insolvenzgeld</a>
-				</li>
-				<li>
-					<a href="#">Lohn während Krankheit</a>
-				</li>
-				<li>
-					<a href="#">Lohn während Urlaub</a>
-				</li>
-				<li>
-					<a href="#">Geringfügig beschäftigt = gleiche Rechte für alle</a>
-				</li>
-				<li>
-					<a href="#">Was tun, wenn der Arbeitgeber keinen Urlaub gewährt?</a>
-				</li>
-				<li>
-					<a href="#">Wieviel Urlaub steht mir zu</a>
-				</li>
-				<li class="lastSibling">
-					<a href="#">Das ??? hilft weiter</a>    	    	
-				</li>
-				<li id="linkdrei" class="maintopic">
-					<a href="#">Alles hat ein Ende</a>
-				</li>
-				<li>
-					<a href="#">Kündigung: Achtung! ???</a>
-				</li>
-				<li>
-					<a href="#">Befristeter Arbeitsvertrag</a>
-				</li>
-				<li>
-					<a href="#">Aufhebungsvertrag</a>
-				</li>
-				<li>
-					<a href="#">Tod des Arbeitnehmers</a>
-				</li>
-				<li>
-					<a href="#">Abmahnung</a>
-				</li>
-				<li class="lastSibling">
-					<a href="#">Zeugniss</a>
-				</li>
-				<li id="linkvier" class="maintopic">
-					<a href="#">Wie komme ich zu meinem Recht</a>
-				</li>
-				<li>
-					<a href="#">Rechtschutzversicherung</a>
-				</li>
-				<li>
-					<a href="#">Prozesskostenhilfe | ???</a>
-				</li>
-				<li class="leer" >
-					<a href="#"></a>
-				</li>
-				<li class="leer" >
-					<a href="#"></a>
-				</li>
-				<li class="leer" >
-					<a href="#"></a>
-				</li>
-				<li class="leer" >
-					<a href="#"></a>
-				</li>
-				<li class="leer" >
-					<a href="#"></a>
-				</li>
-				<li class="leer" >
-					<a href="#"></a>
-				</li>
-				<li class="leer" >
-					<a href="#"></a>
-				</li>
-				<li class="leer" >
-					<a href="#"></a>
-				</li>
-				<li class="leer" >
-					<a href="#"></a>
-				</li>
-				<li class="leer" >
-					<a href="#"></a>
-				</li>
-
-			</ul>
-		</div>
-
+	
 	</div>
+	
 	<script type="text/javascript" src="cordova.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
-	<script type="text/javascript" src="js/app2.js"></script>
+	<script type="text/javascript" src="js/readfile.js"></script>
+	<script type="text/javascript" src="js/appAbfall.js"></script>
 	<script type="text/javascript">
 		app.initialize();
 	</script>

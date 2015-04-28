@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Arbeitsrecht2.0</name>
+<widget id="AbfallApp OB" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>AbfallAb OB</name>
     <description>
-       Die Arbeitsrechts-App der Kanzleivorort
+       Die AbfallApp für Oberhausen 2015
     </description>
     <author email="support@phonegap.com" href="http://phonegap.com">
         PhoneGap Team

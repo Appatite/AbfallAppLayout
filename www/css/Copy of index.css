@@ -53,7 +53,13 @@ body {
 	clear: both;
 }
 
+#odPortrait{
+display:none;
+}
 
+#odLandscape{
+display:none;
+}
 
 p, img {
 	margin: 0;
@@ -602,6 +608,45 @@ p, img {
 }
 
 
+/* The animation code */
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example1 {
+    from {background-color: white;}
+    to {background-color: lightgrey;}
+}
+
+/* mozilla*/
+@-moz-keyframes example1 {
+    from {background-color: white;}
+    to {background-color: lightgrey;}
+}
+
+
+/* Standard syntax */
+@keyframes example1 {
+    from {background-color: white;}
+    to {background-color: lightgrey;}
+}
+
+/* The element to apply the animation to */
+#odPortrait{
+	display:block;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    -webkit-animation-name: example1; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+       -moz-animation-name: example1; /* Chrome, Safari, Opera */
+    -moz-animation-duration: 4s; /* Chrome, Safari, Opera */
+    animation-name: example1;
+    animation-duration: 4s;
+}
+
+#odLandscape{
+	display:none;
+
+}
 
 }
 
@@ -615,7 +660,42 @@ p, img {
 	}
 	
 	
+/* The animation code */
 
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example2 {
+    from {background-color: green;}
+    to {background-color: red;}
+}
+
+/* mozilla*/
+@-moz-keyframes example2 {
+    from {background-color: green;}
+    to {background-color: red;}
+}
+
+
+/* Standard syntax */
+@keyframes example2 {
+    from {background-color: green;}
+    to {background-color: red;}
+}
+
+/* The element to apply the animation to */
+#odLandscape{
+	display:block;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    -webkit-animation-name: example2; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+       -moz-animation-name: example2; /* Chrome, Safari, Opera */
+    -moz-animation-duration: 4s; /* Chrome, Safari, Opera */
+    animation-name: example2;
+    animation-duration: 4s;
+}
+	
+	#odPortrait{display:none}
 	
 	#inner {
 	width: 95%;
