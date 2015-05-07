@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="AbfallApp OB" version="2.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>AbfallAb OB</name>
+    <name>AbfallApp OB</name>
     <description>
        Die AbfallApp für Oberhausen 2015
     </description>
