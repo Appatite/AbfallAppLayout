@@ -27,178 +27,180 @@ under the License.
 		<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
 		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
 		<link rel="stylesheet" href="css/opensans_light_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+		<link rel="stylesheet" href="css/opensans_semibold_macroman/stylesheet.css" type="text/css" charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="css/indexNeu.css" />
 		<title>Die Abfall-App Layout</title>
 	</head>
 	<body>
 
-	<!--<div id="header" >
-		<div id="linksleer">
-			<img src="img/Icons08042015/arrowLeftGrey.png" >
-			<a href="index.html"><span id="homeButton">Home</span></a>
-		</div>
-		<div id="menumitte">
-			<img src="img/Icons08042015/MenuGrau.png" onclick="disclaimerFunction()">
-		</div>
-		<div id="exitrechts">
-			<img src="img/Icons08042015/XGrey.png" onclick="endApp()">
-		</div>
-		<div class="clear"></div>
-	</div>-->
-	<!--<div id="disclaimer" class="displaynone">
-		Disclaimer
-		<div id="disclaimerButton" onclick="disclaimerHideFunction()">
-			Ja, habe ich zur Kenntniss genommen
-		</div>
-	</div>-->
-	<div id="wrapperBild"></div>
-	<div id="wrapperStart">
-
+		<div id="wrapperBild"></div>
+		<div id="wrapperStart">
 
 			<div id="inner"  >
 				<div id="infoHead">
-					<button id="einstellungen" onclick="einstellFunction()">Einstellung</button>
+					<button id="einstellungen" onclick="einstellFunction()">
+						Einstellung
+					</button>
 					<div id="cross">
 						<img src="img/XWhite.png" onclick="endApp()">
 					</div>
 					<div class="clear"></div>
-					
+
 				</div>
-				
+
 				<div id="infoHeadStrasse" class="displaynone">
-					<button id="einstellungen" onclick="zurueckFunction()">Zurück</button>
+					<button id="einstellungen" onclick="zurueckFunction()">
+						Zurück
+					</button>
 					<div id="cross">
 						<img src="img/XWhite.png" onclick="endApp()">
 					</div>
 					<div class="clear"></div>
-					
+
 				</div>
-				
+
 				<div id="anzeigeView">
-		  
-				  <div id="anzeigeLeerung">
-				  </div>
-				  <!--<div id="layoutTest">
-				  	<p class="muellBezeichner">Roter Deckel</p>
-				  	<p id="muellRoterDeckel">23:04:2015</p>
-				  	<p class="muellBezeichner">Roter Deckel</p>
-				  	<p id="muellRoterDeckel">23:04:2015</p>
-				  					  	<p class="muellBezeichner">Roter Deckel</p>
-				  	<p id="muellWertstoff">23:04:2015</p>
-				  					  	<p class="muellBezeichner">Roter Deckel</p>
-				  	<p id="muellBio">23:04:2015</p>
-				  					  	<p class="muellBezeichner">Roter Deckel</p>
-				  	<p id="muellPapier">23:04:2015</p>
-				  	
-				  	
-				  </div>-->
-				  
-			  </div>
-<!--=====================================================================================================================================-->			  
-			  <div id="strassenauswahlDiv" class="displaynone">
-			  	
 
+					<div id="anzeigeLeerung"></div>
+					<!--<div id="layoutTest">
+					<p class="muellBezeichner">Roter Deckel</p>
+					<p id="muellRoterDeckel">23:04:2015</p>
+					<p class="muellBezeichner">Roter Deckel</p>
+					<p id="muellRoterDeckel">23:04:2015</p>
+					<p class="muellBezeichner">Roter Deckel</p>
+					<p id="muellWertstoff">23:04:2015</p>
+					<p class="muellBezeichner">Roter Deckel</p>
+					<p id="muellBio">23:04:2015</p>
+					<p class="muellBezeichner">Roter Deckel</p>
+					<p id="muellPapier">23:04:2015</p>
 
-						<p>Die ersten 2 Buchstaben Ihrer Strasse eingeben:</p>
+					</div>-->
+
+				</div>
+				<!--=====================================================================================================================================-->
+				<div id="strassenauswahlDiv" class="displaynone">
+
+					<p>
+						Die ersten 2 Buchstaben Ihrer Strasse eingeben:
+					</p>
+
+					<input id="strassenanfang" type="text" value=""/>
+					<button onclick="getInput()">
+						Strasse suchen
+					</button>
+
+					<ul id="ListeUl">
 						
-						<input id="strassenanfang" type="text" value=""/>
-				  		<button onclick="getInput()">Strasse suchen</button>
-		
-					  <ul id="ListeUl">
-					  	<!--<li>Bitte wählen Sie eine Strasse aus:</li>-->
-					  </ul>
-					  <button onclick="geheZuMuelauswahl()">Weiter</button>
-			  </div>
-	
-<!--=====================================================================================================================================-->
+					</ul>
+					<button onclick="geheZuMuelauswahl()">
+						Weiter
+					</button>
+				</div>
 
-			<div id="checkBoxDiv" class="displaynone">
+				<!--=====================================================================================================================================-->
 
-			  <p>Bitte auswählen:</p>
-			  <br/>
-			  <p>Hausmülltonnen:</p>
-			  	
-			
-			  <form id="checkbox">
-			  	
-					<section class="checkboxSection">
-			
-					  	<div class="checkboxFive">
-					  		<input type="checkbox"  id="checkboxFiveInput1" name="RoterDeckel" value="RoterDeckel">
-						  	<label for="checkboxFiveInput1"></label>
-					  	</div>
-					  	<div class="checkboxFiveText">Roter Deckel</div>
-					</section>
-					
-					<section class="checkboxSection">
-			
-					  	<div class="checkboxFive">
-					  		<input type="checkbox" id="checkboxFiveInput2" name="GrünerDeckel" value="GrünerDeckel">
-						  	<label for="checkboxFiveInput2"></label>
-					  	</div>
-					  	<div class="checkboxFiveText">Grüner Deckel</div>
-					</section>
-					
-					<section class="checkboxSection">
-					  	<div class="checkboxFive">
-					  		<input type="checkbox" id="checkboxFiveInput3" name="BlauerDeckel" value="BlauerDeckel">
-						  	<label for="checkboxFiveInput3"></label>
-					  	</div>
-					  	<div class="checkboxFiveText">Blauer Deckel</div>
-					</section>
-					
-					<p>Wertstofftonnen:</p>
-					<section class="checkboxSection">
-			
-					  	<div class="checkboxFive">
-					  		<input type="checkbox" id="checkboxFiveInput4" name="WertBezirk" value="WertBezirk">
-						  	<label for="checkboxFiveInput4"></label>
-					  	</div>
-					  	<div class="checkboxFiveText">Gelber Deckel</div>
-					</section>
-					
-					<section class="checkboxSection">
-					  
-					  	<div class="checkboxFive">
-					  		<input type="checkbox" id="checkboxFiveInput5" name="BioBezirk" value="BioBezirk">
-						  	<label for="checkboxFiveInput5"></label>
-					  	</div>
-					  	<div class="checkboxFiveText">Biotonne</div>
-					</section>
-					
-					<section class="checkboxSection">
-					  
-					  	<div class="checkboxFive">
-					  		<input type="checkbox" id="checkboxFiveInput6" name="PapierBezirk" value="PapierBezirk">
-						  	<label for="checkboxFiveInput6"></label>
-					  	</div>
-					  	<div class="checkboxFiveText">Papiertonne</div>
-					</section>
-					
-					
-			  
-			   <!--<input type="checkbox" name="GrünerDeckel" value="GrünerDeckel"> Hausmüll grüner Deckel<br>
-			    <input type="checkbox" name="BlauerDeckel" value="BlauerDeckel"> Hausmüll blauer Deckel<br>
-			    <br/>
-			     <input type="checkbox" name="WertBezirk" value="WertBezirk"> Wertstoff gelber Deckel<br>
-			      <input type="checkbox" name="BioBezirk" value="BioBezirk"> Biotonne<br>
-			       <input type="checkbox" name="PapierBezirk" value="PapierBezirk"> Papiertonne<br>--></br>
-			  
-			
-			</form>
-			<button onclick="setTonnenAuswahl()">Speichern</button>
-			<!--<button onclick="reloadFunction()">Speichern</button>-->
-			 </div>
+				<div id="checkBoxDiv" class="displaynone">
 
-	
-	</div>
-	
-	<script type="text/javascript" src="cordova.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
-	<script type="text/javascript" src="js/readfile.js"></script>
-	<script type="text/javascript" src="js/appAbfall.js"></script>
-	<script type="text/javascript">
-		app.initialize();
-	</script>
+					<p>
+						Bitte auswählen:
+					</p>
+					<br/>
+					<p>
+						Hausmülltonnen:
+					</p>
+
+					<form id="checkbox">
+
+						<section class="checkboxSection">
+
+							<div class="checkboxFive">
+								<input type="checkbox"  id="checkboxFiveInput1" name="RoterDeckel" value="RoterDeckel">
+								<label for="checkboxFiveInput1"></label>
+							</div>
+							<div class="checkboxFiveText">
+								Roter Deckel
+							</div>
+						</section>
+
+						<section class="checkboxSection">
+
+							<div class="checkboxFive">
+								<input type="checkbox" id="checkboxFiveInput2" name="GrünerDeckel" value="GrünerDeckel">
+								<label for="checkboxFiveInput2"></label>
+							</div>
+							<div class="checkboxFiveText">
+								Grüner Deckel
+							</div>
+						</section>
+
+						<section class="checkboxSection">
+							<div class="checkboxFive">
+								<input type="checkbox" id="checkboxFiveInput3" name="BlauerDeckel" value="BlauerDeckel">
+								<label for="checkboxFiveInput3"></label>
+							</div>
+							<div class="checkboxFiveText">
+								Blauer Deckel
+							</div>
+						</section>
+
+						<p>
+							Wertstofftonnen:
+						</p>
+						<section class="checkboxSection">
+
+							<div class="checkboxFive">
+								<input type="checkbox" id="checkboxFiveInput4" name="WertBezirk" value="WertBezirk">
+								<label for="checkboxFiveInput4"></label>
+							</div>
+							<div class="checkboxFiveText">
+								Gelber Deckel
+							</div>
+						</section>
+
+						<section class="checkboxSection">
+
+							<div class="checkboxFive">
+								<input type="checkbox" id="checkboxFiveInput5" name="BioBezirk" value="BioBezirk">
+								<label for="checkboxFiveInput5"></label>
+							</div>
+							<div class="checkboxFiveText">
+								Biotonne
+							</div>
+						</section>
+
+						<section class="checkboxSection">
+
+							<div class="checkboxFive">
+								<input type="checkbox" id="checkboxFiveInput6" name="PapierBezirk" value="PapierBezirk">
+								<label for="checkboxFiveInput6"></label>
+							</div>
+							<div class="checkboxFiveText">
+								Papiertonne
+							</div>
+						</section>
+
+						<!--<input type="checkbox" name="GrünerDeckel" value="GrünerDeckel"> Hausmüll grüner Deckel<br>
+						<input type="checkbox" name="BlauerDeckel" value="BlauerDeckel"> Hausmüll blauer Deckel<br>
+						<br/>
+						<input type="checkbox" name="WertBezirk" value="WertBezirk"> Wertstoff gelber Deckel<br>
+						<input type="checkbox" name="BioBezirk" value="BioBezirk"> Biotonne<br>
+						<input type="checkbox" name="PapierBezirk" value="PapierBezirk"> Papiertonne<br>--></br>
+
+					</form>
+					<button onclick="setTonnenAuswahl()">
+						Speichern
+					</button>
+					<!--<button onclick="reloadFunction()">Speichern</button>-->
+				</div>
+
+			</div>
+
+			<script type="text/javascript" src="cordova.js"></script>
+			<script type="text/javascript" src="js/index.js"></script>
+			<script type="text/javascript" src="js/readfile2.js"></script>
+			<script type="text/javascript" src="js/appAbfall.js"></script>
+			<script type="text/javascript">
+				app.initialize();
+			</script>
 	</body>
 </html>
